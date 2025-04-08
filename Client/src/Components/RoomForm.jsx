@@ -8,7 +8,7 @@ const RoomForm = () => {
   const navigate = useNavigate();
 
   const generateRoomId = () => {
-    const newRoomId = uuidv4().slice(0, 8); // Generate an 8-character unique ID
+    const newRoomId = uuidv4();
     setRoomId(newRoomId);
   };
 
@@ -21,16 +21,16 @@ const RoomForm = () => {
   };
 
   return (
-    <div className="flex flex-col items-center p-6 space-y-4 border rounded-lg shadow-lg max-w-md mx-auto">
-      <h2 className="text-xl font-semibold">Join a Room</h2>
+    <div className="flex flex-col rounded-b-md  p-6 space-y-4  shadow-lg w-[100%] mx-auto justify-center bg-white items-center">
+      <h2 className="text-xl font-bold">Join a Room</h2>
       <input
         type="text"
         placeholder="Enter Room ID"
         value={roomId}
         onChange={(e) => setRoomId(e.target.value)}
-        className="w-full p-2 border rounded"
+        className="w-full p-2 border rounded text-lg"
       />
-      <button onClick={generateRoomId} className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+      <button onClick={generateRoomId} className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 text-xl">
         Generate Room ID
       </button>
       <input
@@ -38,9 +38,9 @@ const RoomForm = () => {
         placeholder="Enter Your Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        className="w-full p-2 border rounded"
+        className="w-full p-2 border rounded text-lg"
       />
-      <button onClick={joinRoom} className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">
+      <button onClick={joinRoom} className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 text-xl">
         Join Room
       </button>
     </div>
