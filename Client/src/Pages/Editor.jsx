@@ -1,9 +1,7 @@
 import React from 'react'
 
 const Editor = () => {
-  return (
-    <div>Editor</div>
-  )
+  return <h1 className='text-3xl text-fuchsia-800 font-bold'>Editor Page</h1>
 }
 
 export default Editor
