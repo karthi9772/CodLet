@@ -23,8 +23,7 @@ const Editor = () => {
 
   return (
     <div className="h-screen w-screen bg-black text-white flex">
-      {/* Code Editor Panel */}
-      <div className="w-1/2 h-full p-4">
+      <div className="w-1/2 h-full p-2">
         <div className="relative h-full w-full">
           <textarea
             value={code}
@@ -40,9 +39,7 @@ const Editor = () => {
           </button>
         </div>
       </div>
-
-      {/* Output Panel */}
-      <div className="w-1/2 h-full p-4">
+      <div className="w-1/2 h-full p-2">
         <div className="w-full h-full bg-[#2D2D3A] text-zinc-100 p-4 rounded-lg shadow-lg overflow-auto">
           <pre>{output}</pre>
         </div>
