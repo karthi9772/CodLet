@@ -101,7 +101,7 @@ const Copilot = () => {
   };
 
   return (
-    <div className="w-full mx-15 p-4 bg-gray-900 shadow-xl rounded-2xl flex flex-col h-[97vh]">
+    <div className="w-[95%] mx-15 p-4 bg-gray-900 shadow-xl rounded-2xl flex flex-col h-[97vh]">
       <div className="text-xl text-white font-bold mb-4">Copilot Assistant</div>
 
       <div className="flex-1 overflow-y-auto space-y-2 p-2 bg-gray-900 rounded-xl">
