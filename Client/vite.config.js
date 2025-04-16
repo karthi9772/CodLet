@@ -9,4 +9,7 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  optimizeDeps: {
+    include: ['react-syntax-highlighter'],
+  },
 })
