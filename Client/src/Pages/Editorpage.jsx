@@ -4,7 +4,8 @@ import Voice from '../Components/Voice';
 import Chat from '../Components/Chat';
 import Whiteboard from '../Components/Whiteboard';
 import Copilot from '../Components/Copilot';
-
+import { socket } from '../../Socket'; 
+  
 import {
   FileText,
   MessageCircle,
@@ -24,7 +25,7 @@ const Editorpage = () => {
       case 'Voice':
         return <Voice />;
       case 'Chat':
-        return <Chat />;
+        return <Chat socket={socket}/>;
       case 'Whiteboard':
         return <Whiteboard />;
       case 'Copilot':
