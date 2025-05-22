@@ -18,13 +18,22 @@ app.use(cors())
 app.use(express.static(path.join(__dirname, "public"))) // Serve static files
 
 const server = http.createServer(app)
+
 const io = new Server(server, {
-	cors: {
-		origin: "*",
-	},
-	maxHttpBufferSize: 1e8,
-	pingTimeout: 60000,
-})
+  cors: {
+    origin: [
+      'https://cod-let-server.vercel.app',
+      'http://localhost:5173',
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  },
+  maxHttpBufferSize: 1e8,
+  pingTimeout: 60000,
+});
+
+
 
 let userSocketMap: User[] = []
 
