@@ -1,5 +1,5 @@
 {
-	"name": "code-sync-server",
+	"name": "codLet-server",
 	"version": "1.0.0",
 	"description": "",
 	"main": "dist/server.js",
