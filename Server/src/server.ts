@@ -264,8 +264,8 @@ const PORT = process.env.PORT || 5000
 
 app.get("/", (req: Request, res: Response) => {
 	// Send the index.html file
-	// res.sendFile(path.join(__dirname, "..", "public", "index.html"))
-	res.send("Api is Running");
+	res.sendFile(path.join(__dirname, "..", "public", "index.html"))
+	// res.send("Api is Running");
 })
 
 server.listen(PORT, () => {
